@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Jasmine Spec Runner v3.6.0</title>
+
+  <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.6.0/jasmine_favicon.png">
+  <link rel="stylesheet" href="lib/jasmine-3.6.0/jasmine.css">
+
+  <script src="lib/jasmine-3.6.0/jasmine.js"></script>
+  <script src="lib/jasmine-3.6.0/jasmine-html.js"></script>
+  <script src="lib/jasmine-3.6.0/boot.js"></script>
+
+  <!-- include source files here... -->
+  <script>
+   function fizzBuzz(n) {
+     var returnValue = n.toString();
+
+     if(n % 3 == 0) returnValue =  "Fizz";
+     if(n % 5 == 0) returnValue =  "Buzz";
+     if(n % 15 == 0) returnValue =  "FizzBuzz";
+
+     return returnValue;
+   }
+  </script>
+  <!-- include spec files here... -->
+  <script>
+    describe('fizzBuzz', function() {
+      describe('jika n adalah 1', function() {
+        it('seharusnya menghasilkan "1"', function() {
+          expect(fizzBuzz(1)).toEqual("1");
+        });
+      });
+
+      describe('jika n adalah 2', function() {
+        it('seharusnya menghasilkan "2"', function() {
+          expect(fizzBuzz(2)).toEqual("2");
+        });
+      });
+
+      describe('jika n adalah 3', function() {
+        it('seharusnya menghasilkan "Fizz"', function() {
+          expect(fizzBuzz(3)).toEqual("Fizz");
+        });
+      });
+
+      describe('jika n adalah 6', function() {
+        it('seharusnya menghasilkan "Fizz"', function() {
+          expect(fizzBuzz(6)).toEqual("Fizz");
+        });
+      });
+
+      describe('jika n adalah 5', function() {
+        it('seharusnya menghasilkan "Buzz"', function() {
+          expect(fizzBuzz(5)).toEqual("Buzz");
+        });
+      });
+
+      describe('jika n adalah 10', function() {
+        it('seharusnya menghasilkan "Buzz"', function() {
+          expect(fizzBuzz(10)).toEqual("Buzz");
+        });
+      });
+
+      describe('jika n adalah 15', function() {
+        it('seharusnya menghasilkan "FizzBuzz"', function() {
+          expect(fizzBuzz(15)).toEqual("FizzBuzz");
+        });
+      });
+
+      describe('jika n adalah 30', function() {
+        it('seharusnya menghasilkan "FizzBuzz"', function() {
+          expect(fizzBuzz(30)).toEqual("FizzBuzz");
+        });
+      });
+    });
+  </script>
+</head>
+
+<body>
+</body>
+</html>
